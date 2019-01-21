@@ -118,9 +118,20 @@ function createFlist(){
     $('#favourite').empty();
     for(var i = 0; i<favouritelist.length; i++){
         $('#favourite').append('<tr>'+'<td width="5%" style="padding-left: 1.5%">'+'<img src="style/starg.png" id="ico'+i+'">'+'</td>'+'<td width="20%">'+favouritelist[i].entry.title+'</td>'+'<td id="fbody'+i+'" width="40%">'+'</td>'+'</tr>');
-        document.getElementById("fbody"+i).innerHTML = favouritelist[i].entry.body;
-        var decoded = document.getElementById("fbody"+i).innerText;
-        document.getElementById("fbody"+i).innerHTML = decoded;
+
+        if(favouritelist[i].entry.body.indexOf("&lt;ul&gt;")==0){
+            document.getElementById("fbody"+i).innerHTML = favouritelist[i].entry.body;
+            var decoded = document.getElementById("fbody"+i).innerText;
+            document.getElementById("fbody"+i).innerHTML = decoded;
+        }
+        else{
+            var str1 = "&lt;ul&gt; \n &lt;li&gt;";
+            var str2 = "&lt;/li&gt; \n&lt;/ul&gt;";
+            document.getElementById("fbody"+i).innerHTML = str1 + favouritelist[i].entry.body + str2;
+            var decoded = document.getElementById("fbody"+i).innerText;
+            document.getElementById("fbody"+i).innerHTML = decoded;
+        }
+
 
         document.getElementById("ico"+i).onclick = function(){
             var index = parseInt(this.id.charAt(3));
