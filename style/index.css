@@ -1,0 +1,50 @@
+html,body{
+    height: 100%;
+    width: 100%;
+}
+#header {
+    display: block;
+    margin: 0 auto;
+    width:99%;
+    position: relative;
+    height: 20%;
+}
+#userInput {
+    display:block;
+    margin-top: 1%;
+    margin-left: 2%;
+    width: 85%;
+    font-size: 25px;
+    padding:10px 0px;
+    float:left;
+    border:1px solid #ccc;
+    border-radius: 3px 3px;
+}
+#search{
+    background: url("../style/button.png");
+    background-size:100% 100%;
+    width: 50px;
+    height: 50px;
+    margin-top: 1%;
+    margin-left:30px;
+    border-radius:4px;
+    border:none;
+}
+.buttom{
+    position: relative;
+    min-height:20%;
+    background: #f3fff6;
+    bottom: 0;
+}
+.l1{
+    font-size: 40px;
+    color: #17740e;
+    margin-left: 30px;
+    margin-top: 10px;
+}
+.star{
+
+}
+table{
+    margin:0 auto;
+}

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Waste Lookup</title>
+
+    <link rel="stylesheet" type="text/css" href="style/index.css">
+    <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+    <script src = "script/search.js"></script>
+</head>
+<body onload="getData()">
+    <div class="container" style="height: 100%">
+        <div class = "header">
+            <img src="style/header.png" id="header">
+            <input type = "text" id = "userInput" onkeyup="init()" placeholder = "Search">
+            <input type = "button" id = "search" onclick = "search()">
+        </div>
+        <div class = "mid" id="mid" style="position:relative; min-height:50%">
+
+            <table id="result" width="100%" border="0" cellspacing="0" cellpadding="0"></table>
+
+        </div>
+        <div class = "buttom" id="but">
+            <span class = "l1">Favourites</span>
+            <table id="favourite" width="100%" border="0" cellspacing="0" cellpadding="0"></table>
+        </div>
+    </div>
+
+
+</body>
+</html>
